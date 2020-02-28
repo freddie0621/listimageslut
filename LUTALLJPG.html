@@ -1,0 +1,85 @@
+<html>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script>
+
+    $( document ).ready(function() {
+
+var images = [
+            "http://placehold.it/350x150",
+            "http://placehold.it/150x150",
+            "http://placehold.it/50x150"    
+        ];
+
+	$('img').click(function()
+{
+    var test = $(this).attr('src').split('\/');
+	var namewithoutextension=test[test.length-1].replace('.jpg', '').replace('.JPG', '');
+	//alert(namewithoutextension);
+    <!-- alert(test[test.length-1].replace('.jpg', '')); -->
+	 //$(this).attr('src', images[1]);
+	  var res = namewithoutextension.substring(namewithoutextension.length - 6, namewithoutextension.length-2); 
+	 //alert(res);
+	 
+	 if ( res == '_LUT' ) {
+    console.log("J'ai assez pour pouvoir inviter toute l’école.");
+	  var resLUT = namewithoutextension.substring(namewithoutextension.length - 2, namewithoutextension.length);
+	  var partiegauche = namewithoutextension.substring(0,namewithoutextension.length - 2)
+		if ( resLUT =='13') {
+		$(this).attr('src', namewithoutextension.substring(0,namewithoutextension.length - 6)+'.JPG');
+		alert(namewithoutextension.substring(0,namewithoutextension.length - 6)+'.JPG')//  block of code to be executed if the condition is true
+		} else {
+		//  block of code to be executed if the condition is false
+		$(this).attr('src', partiegauche+doublechiffre(parseInt(resLUT))+'.JPG');
+		}
+	  //alert(parseInt(resLUT));
+	 // alert(doublechiffre(parseInt(resLUT)));
+	 //$(this).attr('src', partiegauche+doublechiffre(parseInt(resLUT))+'.JPG');
+	  //alert (partiegauche+doublechiffre(parseInt(resLUT))+'.JPG');
+	}
+	 else {
+	 alert(namewithoutextension+'_LUT01'+'.JPG');
+	 $(this).attr('src', namewithoutextension+'_LUT01'+'.JPG');
+	 }
+	 
+	 
+});
+
+function doublechiffre(n) {
+   n = +n;
+     return (n < 9 ? "0" : "") + (n + 1);
+} 
+
+
+
+    });
+</script>
+<img  src="adl_cahier_cm1_3bien-lire-les-histoires_page_0001_LUT01.JPG" width="200" />
+<img id="adl_cahier_cm1_3bien-lire-les-histoires_page_0001.jpg" src="adl_cahier_cm1_3bien-lire-les-histoires_page_0001.jpg" width="200" /> 
+<img id="adl_cahier_cm1_3bien-lire-les-histoires_page_0002.jpg" src="adl_cahier_cm1_3bien-lire-les-histoires_page_0002.jpg" width="200" /> 
+<img id="adl_cahier_cm1_3bien-lire-les-histoires_page_0001_LUT11.JPG" src="adl_cahier_cm1_3bien-lire-les-histoires_page_0001_LUT11.JPG" width="200" />
+"<img id="adl_cahier_cm1_3bien-lire-les-histoires_page_0003.jpg" src="adl_cahier_cm1_3bien-lire-les-histoires_page_0003.jpg" width="200" />" 
+"<img id="adl_cahier_cm1_3bien-lire-les-histoires_page_0004.jpg" src="adl_cahier_cm1_3bien-lire-les-histoires_page_0004.jpg" width="200" />" 
+"<img id="adl_cahier_cm1_3bien-lire-les-histoires_page_0005.jpg" src="adl_cahier_cm1_3bien-lire-les-histoires_page_0005.jpg" width="200" />" 
+"<img id="adl_cahier_cm1_3bien-lire-les-histoires_page_0006.jpg" src="adl_cahier_cm1_3bien-lire-les-histoires_page_0006.jpg" width="200" />" 
+"<img id="adl_cahier_cm1_3bien-lire-les-histoires_page_0007.jpg" src="adl_cahier_cm1_3bien-lire-les-histoires_page_0007.jpg" width="200" />" 
+"<img id="adl_cahier_cm1_3bien-lire-les-histoires_page_0008.jpg" src="adl_cahier_cm1_3bien-lire-les-histoires_page_0008.jpg" width="200" />" 
+"<img id="adl_cahier_cm1_3bien-lire-les-histoires_page_0009.jpg" src="adl_cahier_cm1_3bien-lire-les-histoires_page_0009.jpg" width="200" />" 
+"<img id="adl_cahier_cm1_3bien-lire-les-histoires_page_0010.jpg" src="adl_cahier_cm1_3bien-lire-les-histoires_page_0010.jpg" width="200" />" 
+"<img id="adl_cahier_cm1_3bien-lire-les-histoires_page_0011.jpg" src="adl_cahier_cm1_3bien-lire-les-histoires_page_0011.jpg" width="200" />" 
+"<img id="adl_cahier_cm1_3bien-lire-les-histoires_page_0012.jpg" src="adl_cahier_cm1_3bien-lire-les-histoires_page_0012.jpg" width="200" />" 
+"<img id="adl_cahier_cm1_3bien-lire-les-histoires_page_0013.jpg" src="adl_cahier_cm1_3bien-lire-les-histoires_page_0013.jpg" width="200" />" 
+"<img id="adl_cahier_cm1_3bien-lire-les-histoires_page_0014.jpg" src="adl_cahier_cm1_3bien-lire-les-histoires_page_0014.jpg" width="200" />" 
+"<img id="adl_cahier_cm1_3bien-lire-les-histoires_page_0015.jpg" src="adl_cahier_cm1_3bien-lire-les-histoires_page_0015.jpg" width="200" />" 
+"<img id="adl_cahier_cm1_3bien-lire-les-histoires_page_0016.jpg" src="adl_cahier_cm1_3bien-lire-les-histoires_page_0016.jpg" width="200" />" 
+"<img id="adl_cahier_cm1_3bien-lire-les-histoires_page_0017.jpg" src="adl_cahier_cm1_3bien-lire-les-histoires_page_0017.jpg" width="200" />" 
+"<img id="adl_cahier_cm1_3bien-lire-les-histoires_page_0018.jpg" src="adl_cahier_cm1_3bien-lire-les-histoires_page_0018.jpg" width="200" />" 
+"<img id="adl_cahier_cm1_3bien-lire-les-histoires_page_0019.jpg" src="adl_cahier_cm1_3bien-lire-les-histoires_page_0019.jpg" width="200" />" 
+"<img id="adl_cahier_cm1_3bien-lire-les-histoires_page_0020.jpg" src="adl_cahier_cm1_3bien-lire-les-histoires_page_0020.jpg" width="200" />" 
+"<img id="adl_cahier_cm1_3bien-lire-les-histoires_page_0021.jpg" src="adl_cahier_cm1_3bien-lire-les-histoires_page_0021.jpg" width="200" />" 
+"<img id="adl_cahier_cm1_3bien-lire-les-histoires_page_0022.jpg" src="adl_cahier_cm1_3bien-lire-les-histoires_page_0022.jpg" width="200" />" 
+"<img id="adl_cahier_cm1_3bien-lire-les-histoires_page_0023.jpg" src="adl_cahier_cm1_3bien-lire-les-histoires_page_0023.jpg" width="200" />" 
+"<img id="adl_cahier_cm1_3bien-lire-les-histoires_page_0024.jpg" src="adl_cahier_cm1_3bien-lire-les-histoires_page_0024.jpg" width="200" />" 
+"<img id="adl_cahier_cm1_3bien-lire-les-histoires_page_0025.jpg" src="adl_cahier_cm1_3bien-lire-les-histoires_page_0025.jpg" width="200" />" 
+"<img id="adl_cahier_cm1_3bien-lire-les-histoires_page_0026.jpg" src="adl_cahier_cm1_3bien-lire-les-histoires_page_0026.jpg" width="200" />" 
+<p id="demo">kkk</p> 
+</html>
